@@ -74,10 +74,10 @@ export const CompetitiveView = () => {
                 <tr key={i} className="border-b border-border/50">
                   <td className="py-2.5 text-foreground/80">{q.topic}</td>
                   <td className="py-2.5 text-center">
-                    {q.TCS ? <CheckCircle2 className="w-4 h-4 text-positive inline" /> : <XCircle className="w-4 h-4 text-negative inline" />}
+                    {q.CROMPTON ? <CheckCircle2 className="w-4 h-4 text-positive inline" /> : <XCircle className="w-4 h-4 text-negative inline" />}
                   </td>
                   <td className="py-2.5 text-center">
-                    {q.INFY ? <CheckCircle2 className="w-4 h-4 text-positive inline" /> : <XCircle className="w-4 h-4 text-negative inline" />}
+                    {q.HAVELLS ? <CheckCircle2 className="w-4 h-4 text-positive inline" /> : <XCircle className="w-4 h-4 text-negative inline" />}
                   </td>
                   <td className="py-2.5 text-center font-mono text-foreground/70">{(q.peerAvg * 100).toFixed(0)}%</td>
                   <td className="py-2.5 text-center">
