@@ -8,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BarChart3, FileText, GitCompare, Upload, Search, TrendingUp } from "lucide-react";
 
 const Index = () => {
-  const [selectedTicker, setSelectedTicker] = useState("TCS");
+  const [selectedTicker, setSelectedTicker] = useState("CROMPTON");
   const selectedCall = mockCalls.find((c) => c.ticker === selectedTicker) ?? mockCalls[0];
 
   return (

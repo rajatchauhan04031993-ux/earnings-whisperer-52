@@ -107,7 +107,7 @@ export const CompetitiveView = () => {
           Peers answered <strong className="text-accent">65% of your top analyst questions</strong> that you left unanswered. Prepare talking points for these high-priority gaps before your next call:
         </p>
         <ul className="space-y-2">
-          {questionGapAnalysis.filter((q) => q.priority === "high" && (!q.TCS || !q.INFY)).map((q, i) => (
+          {questionGapAnalysis.filter((q) => q.priority === "high" && (!q.CROMPTON || !q.HAVELLS)).map((q, i) => (
             <li key={i} className="flex gap-2 items-center text-sm text-foreground/80">
               <div className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
               <strong>{q.topic}</strong> — Peer coverage: {(q.peerAvg * 100).toFixed(0)}%
