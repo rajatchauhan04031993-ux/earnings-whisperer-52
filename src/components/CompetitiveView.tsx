@@ -4,8 +4,8 @@ import { cn } from "@/lib/utils";
 import { AlertTriangle, CheckCircle2, XCircle } from "lucide-react";
 
 export const CompetitiveView = () => {
-  const tcs = mockCalls.find((c) => c.ticker === "TCS")!;
-  const infy = mockCalls.find((c) => c.ticker === "INFY")!;
+  const crompton = mockCalls.find((c) => c.ticker === "CROMPTON")!;
+  const havells = mockCalls.find((c) => c.ticker === "HAVELLS")!;
 
   return (
     <div className="space-y-6">
@@ -16,22 +16,22 @@ export const CompetitiveView = () => {
           <thead>
             <tr className="border-b border-border">
               <th className="text-left py-2 text-muted-foreground font-normal">Metric</th>
-              <th className="text-right py-2 text-primary font-mono">TCS</th>
-              <th className="text-right py-2 text-accent font-mono">INFY</th>
+              <th className="text-right py-2 text-primary font-mono">CROMPTON</th>
+              <th className="text-right py-2 text-accent font-mono">HAVELLS</th>
             </tr>
           </thead>
           <tbody>
-            {Object.keys(tcs.summary.kpis).map((key) => (
+            {Object.keys(crompton.summary.kpis).map((key) => (
               <tr key={key} className="border-b border-border/50">
                 <td className="py-2.5 text-foreground/80">{key}</td>
-                <td className="py-2.5 text-right font-mono text-foreground">{tcs.summary.kpis[key]}</td>
-                <td className="py-2.5 text-right font-mono text-foreground">{infy.summary.kpis[key]}</td>
+                <td className="py-2.5 text-right font-mono text-foreground">{crompton.summary.kpis[key]}</td>
+                <td className="py-2.5 text-right font-mono text-foreground">{havells.summary.kpis[key] ?? "—"}</td>
               </tr>
             ))}
             <tr className="border-b border-border/50">
               <td className="py-2.5 text-foreground/80">Overall Sentiment</td>
-              <td className="py-2.5 text-right font-mono text-positive">{(tcs.overallSentiment * 100).toFixed(0)}%</td>
-              <td className="py-2.5 text-right font-mono text-neutral-sentiment">{(infy.overallSentiment * 100).toFixed(0)}%</td>
+              <td className="py-2.5 text-right font-mono text-positive">{(crompton.overallSentiment * 100).toFixed(0)}%</td>
+              <td className="py-2.5 text-right font-mono text-neutral-sentiment">{(havells.overallSentiment * 100).toFixed(0)}%</td>
             </tr>
           </tbody>
         </table>
@@ -49,8 +49,8 @@ export const CompetitiveView = () => {
               formatter={(v: number) => [(v * 100).toFixed(0) + "%", ""]}
             />
             <Legend />
-            <Line type="monotone" dataKey="TCS" stroke="hsl(142,60%,45%)" strokeWidth={2} dot={{ r: 4 }} />
-            <Line type="monotone" dataKey="INFY" stroke="hsl(38,92%,55%)" strokeWidth={2} dot={{ r: 4 }} />
+            <Line type="monotone" dataKey="CROMPTON" stroke="hsl(142,60%,45%)" strokeWidth={2} dot={{ r: 4 }} />
+            <Line type="monotone" dataKey="HAVELLS" stroke="hsl(38,92%,55%)" strokeWidth={2} dot={{ r: 4 }} />
           </LineChart>
         </ResponsiveContainer>
       </div>
@@ -63,8 +63,8 @@ export const CompetitiveView = () => {
             <thead>
               <tr className="border-b border-border">
                 <th className="text-left py-2 text-muted-foreground font-normal">Topic</th>
-                <th className="text-center py-2 text-muted-foreground font-normal">TCS</th>
-                <th className="text-center py-2 text-muted-foreground font-normal">INFY</th>
+                <th className="text-center py-2 text-muted-foreground font-normal">CROMPTON</th>
+                <th className="text-center py-2 text-muted-foreground font-normal">HAVELLS</th>
                 <th className="text-center py-2 text-muted-foreground font-normal">Peer Avg</th>
                 <th className="text-center py-2 text-muted-foreground font-normal">Priority</th>
               </tr>
@@ -74,10 +74,10 @@ export const CompetitiveView = () => {
                 <tr key={i} className="border-b border-border/50">
                   <td className="py-2.5 text-foreground/80">{q.topic}</td>
                   <td className="py-2.5 text-center">
-                    {q.TCS ? <CheckCircle2 className="w-4 h-4 text-positive inline" /> : <XCircle className="w-4 h-4 text-negative inline" />}
+                    {q.CROMPTON ? <CheckCircle2 className="w-4 h-4 text-positive inline" /> : <XCircle className="w-4 h-4 text-negative inline" />}
                   </td>
                   <td className="py-2.5 text-center">
-                    {q.INFY ? <CheckCircle2 className="w-4 h-4 text-positive inline" /> : <XCircle className="w-4 h-4 text-negative inline" />}
+                    {q.HAVELLS ? <CheckCircle2 className="w-4 h-4 text-positive inline" /> : <XCircle className="w-4 h-4 text-negative inline" />}
                   </td>
                   <td className="py-2.5 text-center font-mono text-foreground/70">{(q.peerAvg * 100).toFixed(0)}%</td>
                   <td className="py-2.5 text-center">
@@ -104,10 +104,10 @@ export const CompetitiveView = () => {
           <span className="text-xs font-mono text-primary uppercase tracking-wider">Prep Recommendation</span>
         </div>
         <p className="text-sm text-foreground/80 mb-3">
-          Peers answered <strong className="text-accent">65% of your top analyst questions</strong> that you left unanswered. Prepare talking points for these high-priority gaps before your next call:
+          Havells answered <strong className="text-accent">60% of your top analyst questions</strong> that you left unanswered. Prepare talking points for these high-priority gaps before your next call:
         </p>
         <ul className="space-y-2">
-          {questionGapAnalysis.filter((q) => q.priority === "high" && (!q.TCS || !q.INFY)).map((q, i) => (
+          {questionGapAnalysis.filter((q) => q.priority === "high" && (!q.CROMPTON || !q.HAVELLS)).map((q, i) => (
             <li key={i} className="flex gap-2 items-center text-sm text-foreground/80">
               <div className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
               <strong>{q.topic}</strong> — Peer coverage: {(q.peerAvg * 100).toFixed(0)}%

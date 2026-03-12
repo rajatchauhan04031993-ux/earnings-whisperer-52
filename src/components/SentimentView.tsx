@@ -80,9 +80,9 @@ export const SentimentView = ({ call }: SentimentViewProps) => {
           <span className="text-xs font-mono text-primary uppercase tracking-wider">AI Insight</span>
         </div>
         <p className="text-sm text-foreground/80">
-          Voice confidence was notably <strong className="text-positive">high during deal pipeline discussion</strong> (+0.91),
-          suggesting genuine conviction. However, <strong className="text-negative">hedging detected in Q&A on margins</strong> (-0.15)
-          — management avoided specifics on subcontracting costs. Recommend monitoring this in Q4 call.
+          Voice confidence was notably <strong className="text-positive">high during product strategy discussion</strong> (+0.88),
+          suggesting genuine conviction in premiumization. However, <strong className="text-negative">hedging detected in Q&A on pumps</strong> (+0.25)
+          — management avoided specifics on margin recovery timeline. Recommend preparing detailed pump segment talking points for Q4 call.
         </p>
       </div>
     </div>

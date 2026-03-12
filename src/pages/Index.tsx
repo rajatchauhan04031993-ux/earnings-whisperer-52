@@ -8,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BarChart3, FileText, GitCompare, Upload, Search, TrendingUp } from "lucide-react";
 
 const Index = () => {
-  const [selectedTicker, setSelectedTicker] = useState("TCS");
+  const [selectedTicker, setSelectedTicker] = useState("CROMPTON");
   const selectedCall = mockCalls.find((c) => c.ticker === selectedTicker) ?? mockCalls[0];
 
   return (
@@ -21,8 +21,8 @@ const Index = () => {
               <TrendingUp className="w-4 h-4 text-primary" />
             </div>
             <div>
-              <h1 className="text-base font-semibold text-foreground tracking-tight">EarningsInsight AI</h1>
-              <p className="text-[10px] text-muted-foreground uppercase tracking-widest">Decode Earnings. Spot Opportunities.</p>
+              <h1 className="text-base font-semibold text-foreground tracking-tight">Crompton IR Analytics</h1>
+              <p className="text-[10px] text-muted-foreground uppercase tracking-widest">Earnings Intelligence · Competitive Edge</p>
             </div>
           </div>
 
