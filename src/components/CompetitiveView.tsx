@@ -21,17 +21,17 @@ export const CompetitiveView = () => {
             </tr>
           </thead>
           <tbody>
-            {Object.keys(tcs.summary.kpis).map((key) => (
+            {Object.keys(crompton.summary.kpis).map((key) => (
               <tr key={key} className="border-b border-border/50">
                 <td className="py-2.5 text-foreground/80">{key}</td>
-                <td className="py-2.5 text-right font-mono text-foreground">{tcs.summary.kpis[key]}</td>
-                <td className="py-2.5 text-right font-mono text-foreground">{infy.summary.kpis[key]}</td>
+                <td className="py-2.5 text-right font-mono text-foreground">{crompton.summary.kpis[key]}</td>
+                <td className="py-2.5 text-right font-mono text-foreground">{havells.summary.kpis[key] ?? "—"}</td>
               </tr>
             ))}
             <tr className="border-b border-border/50">
               <td className="py-2.5 text-foreground/80">Overall Sentiment</td>
-              <td className="py-2.5 text-right font-mono text-positive">{(tcs.overallSentiment * 100).toFixed(0)}%</td>
-              <td className="py-2.5 text-right font-mono text-neutral-sentiment">{(infy.overallSentiment * 100).toFixed(0)}%</td>
+              <td className="py-2.5 text-right font-mono text-positive">{(crompton.overallSentiment * 100).toFixed(0)}%</td>
+              <td className="py-2.5 text-right font-mono text-neutral-sentiment">{(havells.overallSentiment * 100).toFixed(0)}%</td>
             </tr>
           </tbody>
         </table>
