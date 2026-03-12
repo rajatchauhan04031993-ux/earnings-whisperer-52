@@ -63,8 +63,8 @@ export const CompetitiveView = () => {
             <thead>
               <tr className="border-b border-border">
                 <th className="text-left py-2 text-muted-foreground font-normal">Topic</th>
-                <th className="text-center py-2 text-muted-foreground font-normal">TCS</th>
-                <th className="text-center py-2 text-muted-foreground font-normal">INFY</th>
+                <th className="text-center py-2 text-muted-foreground font-normal">CROMPTON</th>
+                <th className="text-center py-2 text-muted-foreground font-normal">HAVELLS</th>
                 <th className="text-center py-2 text-muted-foreground font-normal">Peer Avg</th>
                 <th className="text-center py-2 text-muted-foreground font-normal">Priority</th>
               </tr>
