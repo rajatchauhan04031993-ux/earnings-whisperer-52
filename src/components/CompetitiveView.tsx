@@ -49,8 +49,8 @@ export const CompetitiveView = () => {
               formatter={(v: number) => [(v * 100).toFixed(0) + "%", ""]}
             />
             <Legend />
-            <Line type="monotone" dataKey="TCS" stroke="hsl(142,60%,45%)" strokeWidth={2} dot={{ r: 4 }} />
-            <Line type="monotone" dataKey="INFY" stroke="hsl(38,92%,55%)" strokeWidth={2} dot={{ r: 4 }} />
+            <Line type="monotone" dataKey="CROMPTON" stroke="hsl(142,60%,45%)" strokeWidth={2} dot={{ r: 4 }} />
+            <Line type="monotone" dataKey="HAVELLS" stroke="hsl(38,92%,55%)" strokeWidth={2} dot={{ r: 4 }} />
           </LineChart>
         </ResponsiveContainer>
       </div>
