@@ -4,8 +4,8 @@ import { cn } from "@/lib/utils";
 import { AlertTriangle, CheckCircle2, XCircle } from "lucide-react";
 
 export const CompetitiveView = () => {
-  const tcs = mockCalls.find((c) => c.ticker === "TCS")!;
-  const infy = mockCalls.find((c) => c.ticker === "INFY")!;
+  const crompton = mockCalls.find((c) => c.ticker === "CROMPTON")!;
+  const havells = mockCalls.find((c) => c.ticker === "HAVELLS")!;
 
   return (
     <div className="space-y-6">
