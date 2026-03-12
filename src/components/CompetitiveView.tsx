@@ -104,7 +104,7 @@ export const CompetitiveView = () => {
           <span className="text-xs font-mono text-primary uppercase tracking-wider">Prep Recommendation</span>
         </div>
         <p className="text-sm text-foreground/80 mb-3">
-          Peers answered <strong className="text-accent">65% of your top analyst questions</strong> that you left unanswered. Prepare talking points for these high-priority gaps before your next call:
+          Havells answered <strong className="text-accent">60% of your top analyst questions</strong> that you left unanswered. Prepare talking points for these high-priority gaps before your next call:
         </p>
         <ul className="space-y-2">
           {questionGapAnalysis.filter((q) => q.priority === "high" && (!q.CROMPTON || !q.HAVELLS)).map((q, i) => (
