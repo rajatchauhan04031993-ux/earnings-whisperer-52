@@ -11,7 +11,7 @@ export const CompetitiveView = () => {
     <div className="space-y-6">
       {/* Comparative KPIs */}
       <div className="bg-card rounded-lg p-6 border border-border overflow-x-auto">
-        <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">Head-to-Head: Q3 FY25</h3>
+        <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">Head-to-Head: Q1 FY26</h3>
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border">

@@ -80,9 +80,10 @@ export const SentimentView = ({ call }: SentimentViewProps) => {
           <span className="text-xs font-mono text-primary uppercase tracking-wider">AI Insight</span>
         </div>
         <p className="text-sm text-foreground/80">
-          Voice confidence was notably <strong className="text-positive">high during product strategy discussion</strong> (+0.88),
-          suggesting genuine conviction in premiumization. However, <strong className="text-negative">hedging detected in Q&A on pumps</strong> (+0.25)
-          — management avoided specifics on margin recovery timeline. Recommend preparing detailed pump segment talking points for Q4 call.
+          Management showed <strong className="text-positive">highest conviction on solar pumps</strong> (+0.88) and <strong className="text-positive">BLDC fan launches</strong> (+0.82),
+          suggesting genuine excitement about growth categories. However, <strong className="text-negative">notable deflection on category-wise breakdowns</strong> (+0.20)
+          — "we don't give specific details" repeated multiple times. Seasonal impact narrative is consistent but <strong className="text-neutral-sentiment">fan inventory acknowledgment</strong> (+0.35)
+          suggests Q2 recovery isn't guaranteed. Recommend preparing granular segment data for next call to address analyst frustration.
         </p>
       </div>
     </div>

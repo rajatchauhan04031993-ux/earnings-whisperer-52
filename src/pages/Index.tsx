@@ -62,7 +62,7 @@ const Index = () => {
           <span className="text-muted-foreground">{selectedCall.date}</span>
           <span className="text-muted-foreground ml-auto flex items-center gap-1">
             <div className="w-1.5 h-1.5 rounded-full bg-positive animate-pulse" />
-            Mock Data — Demo Mode
+            Transcript Uploaded — Q1 FY26
           </span>
         </div>
       </div>
