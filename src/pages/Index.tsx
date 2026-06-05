@@ -4,8 +4,9 @@ import { SentimentView } from "@/components/SentimentView";
 import { SummaryView } from "@/components/SummaryView";
 import { CompetitiveView } from "@/components/CompetitiveView";
 import { TopQuestionsView } from "@/components/TopQuestionsView";
+import { FinancialAnalyticsView } from "@/components/FinancialAnalyticsView";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { BarChart3, FileText, GitCompare, Upload, Search, TrendingUp } from "lucide-react";
+import { BarChart3, FileText, GitCompare, Upload, Search, TrendingUp, LineChart } from "lucide-react";
 
 const Index = () => {
   const [selectedTicker, setSelectedTicker] = useState("CROMPTON");
@@ -87,6 +88,10 @@ const Index = () => {
               <GitCompare className="w-3.5 h-3.5" />
               Competitive
             </TabsTrigger>
+            <TabsTrigger value="financials" className="text-xs gap-1.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+              <LineChart className="w-3.5 h-3.5" />
+              Financial Analytics
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="sentiment">
@@ -100,6 +105,9 @@ const Index = () => {
           </TabsContent>
           <TabsContent value="competitive">
             <CompetitiveView />
+          </TabsContent>
+          <TabsContent value="financials">
+            <FinancialAnalyticsView ticker={selectedTicker} />
           </TabsContent>
         </Tabs>
       </main>
