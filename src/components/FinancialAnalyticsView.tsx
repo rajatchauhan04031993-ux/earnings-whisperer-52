@@ -187,7 +187,7 @@ export const FinancialAnalyticsView = ({ ticker }: Props) => {
                 <Tooltip {...tooltipStyle} />
                 <Bar dataKey="yoy">
                   {qSeries.slice(4).map((d, i) => (
-                    <Cell key={i} fill={d.yoy >= 0 ? "hsl(var(--positive))" : "hsl(var(--negative))"} />
+                    <Cell key={i} fill={d.yoy >= 0 ? "hsl(var(--chart-positive))" : "hsl(var(--chart-negative))"} />
                   ))}
                 </Bar>
               </BarChart>
@@ -222,9 +222,9 @@ export const FinancialAnalyticsView = ({ ticker }: Props) => {
               <Tooltip {...tooltipStyle} />
               <Legend wrapperStyle={{ fontSize: 11 }} />
               <Line type="monotone" dataKey="grossMargin" name="Gross %" stroke="hsl(var(--primary))" dot={false} />
-              <Line type="monotone" dataKey="opMargin" name="Operating %" stroke="hsl(var(--positive))" dot={false} />
+              <Line type="monotone" dataKey="opMargin" name="Operating %" stroke="hsl(var(--chart-positive))" dot={false} />
               <Line type="monotone" dataKey="ebitdaMargin" name="EBITDA %" stroke="hsl(var(--accent))" dot={false} />
-              <Line type="monotone" dataKey="netMargin" name="Net %" stroke="hsl(var(--neutral-sentiment))" dot={false} />
+              <Line type="monotone" dataKey="netMargin" name="Net %" stroke="hsl(var(--chart-neutral))" dot={false} />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -267,8 +267,8 @@ export const FinancialAnalyticsView = ({ ticker }: Props) => {
               <Tooltip {...tooltipStyle} />
               <Legend wrapperStyle={{ fontSize: 11 }} />
               <Bar dataKey="ocf" name="Operating CF" fill="hsl(var(--primary))" />
-              <Bar dataKey="fcf" name="Free CF" fill="hsl(var(--positive))" />
-              <Bar dataKey="capex" name="CapEx" fill="hsl(var(--neutral-sentiment))" />
+              <Bar dataKey="fcf" name="Free CF" fill="hsl(var(--chart-positive))" />
+              <Bar dataKey="capex" name="CapEx" fill="hsl(var(--chart-neutral))" />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -310,7 +310,7 @@ export const FinancialAnalyticsView = ({ ticker }: Props) => {
                 <Tooltip {...tooltipStyle} />
                 <Legend wrapperStyle={{ fontSize: 11 }} />
                 <Line dataKey="roe" name="ROE" stroke="hsl(var(--primary))" dot />
-                <Line dataKey="roa" name="ROA" stroke="hsl(var(--positive))" dot />
+                <Line dataKey="roa" name="ROA" stroke="hsl(var(--chart-positive))" dot />
                 <Line dataKey="roic" name="ROIC" stroke="hsl(var(--accent))" dot />
               </LineChart>
             </ResponsiveContainer>
