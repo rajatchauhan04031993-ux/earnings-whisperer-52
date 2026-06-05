@@ -88,6 +88,10 @@ const Index = () => {
               <GitCompare className="w-3.5 h-3.5" />
               Competitive
             </TabsTrigger>
+            <TabsTrigger value="financials" className="text-xs gap-1.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+              <LineChart className="w-3.5 h-3.5" />
+              Financial Analytics
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="sentiment">
