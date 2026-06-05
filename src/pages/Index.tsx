@@ -106,6 +106,9 @@ const Index = () => {
           <TabsContent value="competitive">
             <CompetitiveView />
           </TabsContent>
+          <TabsContent value="financials">
+            <FinancialAnalyticsView ticker={selectedTicker} />
+          </TabsContent>
         </Tabs>
       </main>
     </div>
