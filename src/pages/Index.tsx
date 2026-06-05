@@ -4,8 +4,9 @@ import { SentimentView } from "@/components/SentimentView";
 import { SummaryView } from "@/components/SummaryView";
 import { CompetitiveView } from "@/components/CompetitiveView";
 import { TopQuestionsView } from "@/components/TopQuestionsView";
+import { FinancialAnalyticsView } from "@/components/FinancialAnalyticsView";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { BarChart3, FileText, GitCompare, Upload, Search, TrendingUp } from "lucide-react";
+import { BarChart3, FileText, GitCompare, Upload, Search, TrendingUp, LineChart } from "lucide-react";
 
 const Index = () => {
   const [selectedTicker, setSelectedTicker] = useState("CROMPTON");
