@@ -1,12 +1,9 @@
 import { useState } from "react";
 import { mockCalls } from "@/data/mockData";
-import { SentimentView } from "@/components/SentimentView";
-import { SummaryView } from "@/components/SummaryView";
-import { CompetitiveView } from "@/components/CompetitiveView";
-import { TopQuestionsView } from "@/components/TopQuestionsView";
+import { EarningsIntelligenceView } from "@/components/EarningsIntelligenceView";
 import { FinancialAnalyticsView } from "@/components/FinancialAnalyticsView";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { BarChart3, FileText, GitCompare, Upload, Search, TrendingUp, LineChart } from "lucide-react";
+import { Upload, TrendingUp, LineChart, Sparkles } from "lucide-react";
 
 const Index = () => {
   const [selectedTicker, setSelectedTicker] = useState("CROMPTON");
@@ -70,41 +67,20 @@ const Index = () => {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-6">
-        <Tabs defaultValue="sentiment" className="space-y-6">
-          <TabsList className="bg-card border border-border p-1 h-auto">
-            <TabsTrigger value="sentiment" className="text-xs gap-1.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              <BarChart3 className="w-3.5 h-3.5" />
-              Sentiment
-            </TabsTrigger>
-            <TabsTrigger value="summary" className="text-xs gap-1.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              <FileText className="w-3.5 h-3.5" />
-              Summary
-            </TabsTrigger>
-            <TabsTrigger value="questions" className="text-xs gap-1.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              <Search className="w-3.5 h-3.5" />
-              Top Questions
-            </TabsTrigger>
-            <TabsTrigger value="competitive" className="text-xs gap-1.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              <GitCompare className="w-3.5 h-3.5" />
-              Competitive
+        <Tabs defaultValue="earnings" className="space-y-6">
+          <TabsList className="bg-card border border-border p-1 h-auto grid grid-cols-2 w-full sm:max-w-xl">
+            <TabsTrigger value="earnings" className="text-xs gap-1.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+              <Sparkles className="w-3.5 h-3.5" />
+              Earnings Intelligence
             </TabsTrigger>
             <TabsTrigger value="financials" className="text-xs gap-1.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
               <LineChart className="w-3.5 h-3.5" />
-              Financial Analytics
+              Financial Intelligence
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="sentiment">
-            <SentimentView call={selectedCall} />
-          </TabsContent>
-          <TabsContent value="summary">
-            <SummaryView call={selectedCall} />
-          </TabsContent>
-          <TabsContent value="questions">
-            <TopQuestionsView call={selectedCall} />
-          </TabsContent>
-          <TabsContent value="competitive">
-            <CompetitiveView />
+          <TabsContent value="earnings">
+            <EarningsIntelligenceView call={selectedCall} />
           </TabsContent>
           <TabsContent value="financials">
             <FinancialAnalyticsView ticker={selectedTicker} />
